@@ -281,6 +281,14 @@ static bool command_common(uint8_t code)
         case KC_F4:
             switch_layer(4);
             break;
+        case KC_5:
+        case KC_F5:
+            switch_layer(5);
+            break;
+        case KC_6:
+        case KC_F6:
+            switch_layer(6);
+            break;
         default:
             print("?");
             return false;

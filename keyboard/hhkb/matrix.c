@@ -56,7 +56,6 @@ static matrix_row_t _matrix1[MATRIX_ROWS];
 // key:     on: 0/off: 1
 // prev:    unknown: output previous key state(negated)?
 
-#ifdef HOST_PJRC
 #if defined(__AVR_AT90USB1286__)
 // Ports for Teensy++
 // row:     PB0-2
@@ -79,7 +78,8 @@ static matrix_row_t _matrix1[MATRIX_ROWS];
 #define KEY_PREV_OFF()          (PORTE &= ~(1<<7))
 #define KEY_POWER_ON()
 #define KEY_POWER_OFF()
-#else
+
+#elif defined(__AVR_ATmega32U4__)
 // Ports for Teensy 2.0
 // row:     PB0-2
 // col:     PB3-5,6
@@ -101,8 +101,6 @@ static matrix_row_t _matrix1[MATRIX_ROWS];
 #define KEY_PREV_OFF()          (PORTF &= ~(1<<1))
 #define KEY_POWER_ON()
 #define KEY_POWER_OFF()
-#endif // MCU
-
 
 #elif defined(__AVR_ATmega328P__)
 // Ports for V-USB
