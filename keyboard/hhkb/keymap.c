@@ -78,7 +78,15 @@ static const uint8_t PROGMEM fn_keycode[] = {
 };
 
 static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    /* Layer 0: Default Layer (QWERTY)
+
+    /* Layer 0: (Colemak) */
+    KEYMAP(ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, BSLS,GRV, \
+           TAB, Q,   W,   F,   P,   G,   J,   L,   U,   Y,   SCLN,LBRC,RBRC,BSPC, \
+           LCTL,A,   R,   S,   T,   D,   H,   N,   E,   I,   O,   QUOT,ENT, \
+           LSFT,Z,   X,   C,   V,   B,   K,   M,   COMM,DOT, FN3, RSFT,FN1, \
+                LALT,LGUI,          FN5,                RGUI,FN2),
+
+    /* Layer 1: QWERTY
      * ,-----------------------------------------------------------.
      * |Esc|  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -|  =|  \|  `|
      * |-----------------------------------------------------------|
@@ -97,14 +105,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            LSFT,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, FN3, RSFT,FN1, \
                 LALT,LGUI,          FN5,                RGUI,FN2),
 
-    /* Layer 1: (Colemak) */
-    KEYMAP(ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, BSLS,GRV, \
-           TAB, Q,   W,   F,   P,   G,   J,   L,   U,   Y,   SCLN,LBRC,RBRC,BSPC, \
-           LCTL,A,   R,   S,   T,   D,   H,   N,   E,   I,   O,   QUOT,ENT, \
-           LSFT,Z,   X,   C,   V,   B,   K,   M,   COMM,DOT, FN3, RSFT,FN1, \
-                LALT,LGUI,          FN5,                RGUI,FN2),
-
-    /* Layer 2: HHKB mode (HHKB Fn)
+    /* Layer 2: HHKB functions
      * ,-----------------------------------------------------------.
      * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Ins|Del|
      * |-----------------------------------------------------------|
@@ -127,11 +128,11 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,-----------------------------------------------------------.
      * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Ins|Del|
      * |-----------------------------------------------------------|
-     * |Tab  |Hom|PgD|Up |PgU|End|Hom|PgD|PgUlEnd|   |   |   |Backs|
+     * |Tab  |Hom|PgD|Up |PgU|End|Hom|PgD|PgU|End|   |   |   |Backs|
      * |-----------------------------------------------------------|
      * |Contro|   |Lef|Dow|Rig|   |Lef|Dow|Up |Rig|   |   |Return  |
      * |-----------------------------------------------------------|
-     * |Shift   |   |   |   |   |   |Hom|PgD|PgUlEnd|xxx|Shift |   |
+     * |Shift   |   |   |   |   |   |Hom|PgD|PgU|End|xxx|Shift |   |
      * `-----------------------------------------------------------'
      *       |Alt|Gui  |Space                  |Gui  |Alt|
      *       `-------------------------------------------'
