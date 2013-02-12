@@ -72,7 +72,7 @@ static const uint8_t PROGMEM fn_keycode[] = {
     KC_NO,          // Fn2
     KC_SLSH,        // Fn3
     KC_NO,          // Fn4
-    KC_SPC,         // Fn5
+    KC_NO,          // Fn5
     KC_NO,          // Fn6
     KC_NO           // Fn7
 };
@@ -84,7 +84,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            TAB, Q,   W,   F,   P,   G,   J,   L,   U,   Y,   SCLN,LBRC,RBRC,BSPC, \
            LCTL,A,   R,   S,   T,   D,   H,   N,   E,   I,   O,   QUOT,ENT, \
            LSFT,Z,   X,   C,   V,   B,   K,   M,   COMM,DOT, FN3, RSFT,FN1, \
-                LALT,LGUI,          FN5,                RGUI,FN2),
+                LALT,LGUI,          SPC,                RGUI,FN2),
 
     /* Layer 1: QWERTY
      * ,-----------------------------------------------------------.
@@ -96,14 +96,14 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------------------------------------|
      * |Shift   |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|Fn3|Shift |Shf|
      * `-----------------------------------------------------------'
-     *       |Alt|Gui  |Fn5                    |Gui  |Fn2|
+     *       |Alt|Gui  |Space                  |Gui  |Fn2|
      *       `-------------------------------------------'
      */
     KEYMAP(ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, BSLS,GRV, \
            TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSPC, \
            LCTL,A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,ENT, \
            LSFT,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, FN3, RSFT,FN1, \
-                LALT,LGUI,          FN5,                RGUI,FN2),
+                LALT,LGUI,          SPC,                RGUI,FN2),
 
     /* Layer 2: HHKB functions
      * ,-----------------------------------------------------------.
