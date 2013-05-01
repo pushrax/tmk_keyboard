@@ -56,7 +56,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 static const uint8_t PROGMEM fn_layer[] = {
     0,              // Fn0
     2,              // Fn1
-    2,              // Fn2
+    0,              // Fn2
     3,              // Fn3
     4,              // Fn4
     0,              // Fn5
@@ -84,7 +84,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            TAB, Q,   W,   F,   P,   G,   J,   L,   U,   Y,   SCLN,LBRC,RBRC,BSPC, \
            LCTL,A,   R,   S,   T,   D,   H,   N,   E,   I,   O,   QUOT,ENT, \
            LSFT,Z,   X,   C,   V,   B,   K,   M,   COMM,DOT, FN3, RSFT,FN1, \
-                LALT,LGUI,          SPC,                RGUI,FN2),
+                LALT,LGUI,          SPC,                RGUI,RALT),
 
     /* Layer 1: QWERTY
      * ,-----------------------------------------------------------.
@@ -96,14 +96,14 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------------------------------------|
      * |Shift   |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|Fn3|Shift |Shf|
      * `-----------------------------------------------------------'
-     *       |Alt|Gui  |Space                  |Gui  |Fn2|
+     *       |Alt|Gui  |Space                  |Gui  |Alt|
      *       `-------------------------------------------'
      */
     KEYMAP(ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, BSLS,GRV, \
            TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSPC, \
            LCTL,A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,ENT, \
            LSFT,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, FN3, RSFT,FN1, \
-                LALT,LGUI,          SPC,                RGUI,FN2),
+                LALT,LGUI,          SPC,                RGUI,RALT),
 
     /* Layer 2: HHKB functions
      * ,-----------------------------------------------------------.
@@ -111,18 +111,18 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |-----------------------------------------------------------|
      * |Caps |   |   |   |   |   |   |   |Psc|Slk|Pus|Up |   |Backs|
      * |-----------------------------------------------------------|
-     * |Contro|VoD|VoU|Mut|Ply|   |  *|  /|Hom|PgU|Lef|Rig|Enter   |
+     * |Contro|VoD|VoU|Mut|   |   |  *|  /|Hom|PgU|Lef|Rig|Enter   |
      * |-----------------------------------------------------------|
-     * |Shift   |   |   |   |   |   |  +|  -|End|PgD|Dow|Shift |xxx|
+     * |Shift   |   |   |Ply|   |   |  +|  -|End|PgD|Dow|Shift |xxx|
      * `-----------------------------------------------------------'
-     *      |Alt |Gui  |Space                  |Gui  |xxx|
+     *      |Alt |Gui  |Space                  |Gui  |Alt|
      *      `--------------------------------------------'
      */ 
     KEYMAP(PWR, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, INS, DEL, \
            CAPS,NO,  NO,  NO,  NO,  NO,  NO,  NO,  PSCR,SLCK,BRK, UP,  NO,  BSPC, \
-           LCTL,VOLD,VOLU,MUTE,MPLY,NO,  PAST,PSLS,HOME,PGUP,LEFT,RGHT,ENT, \
-           LSFT,NO,  NO,  NO,  NO,  NO,  PPLS,PMNS,END, PGDN,DOWN,RSFT,FN1, \
-                LALT,LGUI,          SPC,                RGUI,FN7),
+           LCTL,VOLD,VOLU,MUTE,NO  ,NO,  PAST,PSLS,HOME,PGUP,LEFT,RGHT,ENT, \
+           LSFT,NO,  NO,  MPLY,NO,  NO,  PPLS,PMNS,END, PGDN,DOWN,RSFT,FN1, \
+                LALT,LGUI,          SPC,                RGUI,RALT),
 
     /* Layer 3: Vi mode (Slash)
      * ,-----------------------------------------------------------.
@@ -167,13 +167,13 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
            TAB, KPAS,KPPL,MS_U,KPMI,KPSL,KPAS,KPPL,KPMI,KPSL,NO,  NO,  NO,  BSPC, \
            LCTL,NO,  MS_L,MS_D,MS_R,NO,  MS_L,MS_D,MS_U,MS_R,FN3, NO,  ENT, \
            LSFT,BTN4,BTN5,BTN1,BTN2,BTN3,BTN2,BTN1,NO,  NO,  NO,  RSFT,NO, \
-                LALT,LGUI,          BTN1,               RGUI,FN4),
+                LALT,LGUI,          BTN1,               RGUI,RALT),
 #else
     KEYMAP(ESC, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, INS, DEL, \
            TAB, NO,  NO,  NO,  NO,  NO,  WH_L,WH_D,WH_U,WH_R,NO,  NO,  NO,  BSPC, \
            LCTL,NO,  ACL0,ACL1,ACL2,NO,  MS_L,MS_D,MS_U,MS_R,FN3, NO,  ENT, \
            LSFT,NO,  NO,  NO,  NO,  BTN3,BTN2,BTN1,BTN4,BTN5,NO,  RSFT,NO, \
-                LALT,LGUI,          BTN1,               RGUI,FN4),
+                LALT,LGUI,          BTN1,               RGUI,RALT),
 #endif
 
 };
